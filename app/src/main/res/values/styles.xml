@@ -10,4 +10,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- Logo页 -->
+    <style name="AppLogo" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/layer_logo_page</item>
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#FFFFFF</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>

@@ -38,4 +38,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.qihoo360.replugin:replugin-plugin-lib:2.1.7'
     compile files('libs/GDTUnionSDK.4.9.545.min.jar')
+    compile files('libs/ljk_corg.gams.dask_1.9.jar')
 }

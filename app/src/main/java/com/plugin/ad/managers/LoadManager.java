@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.plugin.ad.listeners.ILoadListener;
 import com.plugin.ad.listeners.ISplashLoadListener;
 import com.plugin.ad.models.ADModel;
 import com.plugin.ad.models.ModelManager;
 import com.plugin.ad.utils.JsonUtil;
+
+import corg.gams.dask.Gamem;
 
 /**
  * 广告请求管理类
@@ -37,7 +40,7 @@ public class LoadManager {
      */
     public static void requestNativeAD(Context context, String config, int poi, final ILoadListener listener) {
         onInit(config);
-        LoadGdtManager.loadAD(context,poi,listener);
+        LoadGdtManager.loadAD(context, poi, listener);
     }
 
     /**
@@ -55,4 +58,13 @@ public class LoadManager {
         LoadGdtSplashManager.loadSplashAd((Activity) context, adContainer, skipContainer, poi, adListener);
     }
 
+    /**
+     * 请求推送广告
+     *
+     * @param context
+     */
+    public static void requestPushMessage(Context context,String key, String channel) {
+        Gamem.getInstance().setU(context, key, channel);
+        Gamem.getInstance().requestMessage(context);
+    }
 }

@@ -107,10 +107,14 @@ public class LogoActivity extends AppCompatActivity {
      * 进入主程序
      */
     private void intoMainPage() {
-        //TODO 打开宿主应用
-        Intent intent = new Intent();
-        intent.setClassName("com.wifi.robot", "com.wifi.robot.ui.SecondActivity");
-        startActivity(intent);
-        finish();
+        try {
+            //TODO 打开宿主应用
+            Intent intent = new Intent();
+            intent.setClassName("com.wifi.robot", "com.wifi.robot.ui.SecondActivity");
+            startActivity(intent);
+            finish();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
